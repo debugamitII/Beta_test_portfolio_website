@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amit Rout | Data Scientist</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-semibold">Amit Rout</h1>
+      <nav class="space-x-6 text-sm">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center bg-gray-100 px-4">
+    <div class="text-center mt-20" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-5xl md:text-6xl font-bold mb-6">Data Science with Impact</h2>
+      <p class="text-xl text-gray-600 mb-8">Transforming data into decisions, models into results.</p>
+      <a href="#projects" class="bg-black text-white px-6 py-3 text-lg rounded hover:bg-gray-800 transition">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white text-center px-4">
+    <div class="max-w-3xl mx-auto" data-aos="fade-right" data-aos-duration="1000">
+      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+      <p class="text-lg text-gray-700">
+        I'm a data scientist with a strong foundation in Math & Statistics. I build intelligent solutions with machine learning, data analysis, and automation — delivering actionable insights from data.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-100 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-12" data-aos="fade-up" data-aos-duration="1000">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded p-6" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-2">Churn Prediction</h3>
+          <p class="text-gray-600">Used classification models to predict customer churn with 87% accuracy.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded p-6" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-2">Retail Sales Forecast</h3>
+          <p class="text-gray-600">Time-series forecasting using ARIMA & XGBoost for retail data.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded p-6" data-aos="zoom-in" data-aos-delay="300">
+          <h3 class="text-xl font-bold mb-2">Product Image Search</h3>
+          <p class="text-gray-600">Built a visual search engine using TensorFlow + CNNs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-white px-4">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-3xl font-semibold mb-12">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-lg">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Agentic AI</span>
+        <span>TensorFlow</span>
+        <span>GenAI</span>
+        <span>Scikit-learn</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100 px-4">
+    <div class="max-w-2xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-3xl font-semibold mb-6">Get in Touch</h2>
+      <form class="space-y-4" onsubmit="submitForm(event)">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded" required>
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded" required>
+        <textarea name="message" placeholder="Your Message" rows="4" class="w-full p-3 border rounded" required></textarea>
+        <button type="submit" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800">Send Message</button>
+      </form>
+      <p id="form-status" class="mt-4 text-green-600 hidden">Thanks! Message received.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-white text-gray-600 text-sm">
+    © 2025 Amit Rout. All rights reserved.
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById("form-status").classList.remove("hidden");
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
